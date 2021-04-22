@@ -156,43 +156,43 @@ resource "dnd5e_character" "tiger" {
   }
 }
 
-resource "dnd5e_character" "phil" {
-  name              = "Dr Phil"
-  class             = "rogue"
-  alignment         = "chaotic neutral"
-  experience_points = var.party_xp
-  strength          = 12
-  dexterity         = 19
-  constitution      = 12
-  intelligence      = 8
-  wisdom            = 8
-  charisma          = 11
+# resource "dnd5e_character" "phil" {
+#   name              = "Dr Phil"
+#   class             = "rogue"
+#   alignment         = "chaotic neutral"
+#   experience_points = var.party_xp
+#   strength          = 12
+#   dexterity         = 19
+#   constitution      = 12
+#   intelligence      = 8
+#   wisdom            = 8
+#   charisma          = 11
 
-  inventory_item {
-    name        = "leather armor"
-    armor_class = 13
-    equipped    = var.battle_ready
-    weight      = 4
-  }
+#   inventory_item {
+#     name        = "leather armor"
+#     armor_class = 13
+#     equipped    = var.battle_ready
+#     weight      = 4
+#   }
 
-  inventory_item {
-    name        = "wraith's crown"
-    armor_class = -1
-    equipped    = var.battle_ready
-    weight      = 1
-  }
+#   inventory_item {
+#     name        = "wraith's crown"
+#     armor_class = -1
+#     equipped    = var.battle_ready
+#     weight      = 1
+#   }
 
-  inventory_item {
-    name     = "dragon slayer rapier"
-    equipped = var.battle_ready
-    weight   = 1
-  }
+#   inventory_item {
+#     name     = "dragon slayer rapier"
+#     equipped = var.battle_ready
+#     weight   = 1
+#   }
 
-  inventory_item {
-    name   = "1000 ball bearings"
-    weight = 0
-  }
-}
+#   inventory_item {
+#     name   = "1000 ball bearings"
+#     weight = 0
+#   }
+# }
 
 resource "dnd5e_character" "kobold" {
   count             = var.kobold_count
@@ -222,7 +222,7 @@ resource "dnd5e_character" "kobold" {
   }
 
   provisioner "local-exec" {
-    command = "sleep ${5 + count.index * 9}"
+    command = "sleep ${5 + count.index * 3}"
   }
 }
 
