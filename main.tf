@@ -269,10 +269,10 @@ output "party_info" {
       "ac": dnd5e_character.tiger.armor_class,
       "spells": 0,
     },
-    "phil" = {
-      "dex": dnd5e_character.phil.dexterity_modifier,
-      "ac": dnd5e_character.phil.armor_class,
-      "spells": 0,
-    },
+    # "phil" = {
+    #   "dex": dnd5e_character.phil.dexterity_modifier,
+    #   "ac": dnd5e_character.phil.armor_class,
+    #   "spells": 0,
+    # },
   }
 }
