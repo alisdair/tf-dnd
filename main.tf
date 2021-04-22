@@ -65,7 +65,7 @@ resource "dnd5e_character" "julia" {
   }
 
   skills = {
-    # "religion"        = 3
+    "religion"        = 3
     "animal handling" = 1
     "nature"          = 1
     "survival"        = 2
@@ -76,7 +76,7 @@ resource "dnd5e_character" "julia" {
     "summon monster",
     "speak to animals",
     "Melf's acid arrow",
-    # "thunderwave",
+    "thunderwave",
     "cure wounds",
   ]
 }
@@ -219,6 +219,10 @@ resource "dnd5e_character" "kobold" {
     armor_class = 3
     equipped    = true
     weight      = 1
+  }
+
+  provisioner "local-exec" {
+    command = "sleep ${5 + count.index * 9}"
   }
 }
 
