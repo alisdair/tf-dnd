@@ -252,7 +252,7 @@ output "damage" {
   value = "${join("+", dnd5e_roll.damage.values)} + ${dnd5e_roll.damage.modifier} = ${dnd5e_roll.damage.total}"
 }
 
-output "party_info" {
+output "party_stats" {
   value = {
     "julia" = {
       "dex": dnd5e_character.julia.dexterity_modifier,
